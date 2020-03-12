@@ -1,0 +1,99 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    animation-name: box-animation;
+    animation-timing-function: linear;
+    
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation-duration: 4s;
+}
+
+.box:hover{
+    transition-duration: 1s;
+    border: 2px solid white;
+}
+
+.box--top-right{
+    background-color: lightblue;
+    border-radius: 0% 0% 0% 10%;
+    top: 0;
+    right: 0;
+    animation-name: box--top-right;
+    animation-fill-mode: forwards;
+}
+
+.box--top-left{
+    background-color: lightcoral;
+    border-radius: 0% 0% 10% 0%;
+    top: 0;
+    left: 0;
+    animation-name: box--top-left;
+    animation-fill-mode: forwards;
+}
+
+.box--bottom-right{
+    background-color: lightgoldenrodyellow;
+    border-radius: 10% 0% 0% 0%;
+    bottom: 0;
+    right: 0;
+    animation-name: box--bottom-right;
+    animation-fill-mode: forwards;
+}
+
+.box--bottom-left{
+    background-color: lightgreen;
+    border-radius: 0% 10% 0% 0%;
+    bottom: 0;
+    left: 0;
+    animation-name: box--bottom-left;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes box--top-right{
+    0% {background-color: lightskyblue;}
+    100% {
+        background-color: black;
+        border-radius: 0% 0% 0% 100%;
+        top: 50%;
+        right: 50%;
+        
+        
+    }
+}
+
+@keyframes box--top-left{
+    0% {background-color: lightcoral;}
+    100% {
+        background-color: black;
+        border-radius: 0% 0% 100% 0%;
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes box--bottom-right{
+    0% {background-color: lightgoldenrodyellow;}
+    100% {
+        background-color: black;
+        border-radius: 100% 0% 0% 0%;
+        bottom: 50%;
+        right: 50%;
+    }
+}
+
+@keyframes box--bottom-left{
+    0% {background-color: lightgreen;}
+    100% {
+        background-color: black;
+        border-radius: 0% 100% 0% 0%;
+        bottom: 50%;
+        left: 50%;
+    }
+}
